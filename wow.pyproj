@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2c75b030-8fd5-4c82-b766-cd97363bb76e}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile />
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>MSBuild|venv|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="wow\main\admin.py" />
+    <Compile Include="wow\main\apps.py" />
+    <Compile Include="wow\main\forms.py" />
+    <Compile Include="wow\main\migrations\0001_initial.py" />
+    <Compile Include="wow\main\migrations\__init__.py" />
+    <Compile Include="wow\main\models.py" />
+    <Compile Include="wow\main\templates\main\__init__.py" />
+    <Compile Include="wow\main\templates\__init__.py" />
+    <Compile Include="wow\main\tests.py" />
+    <Compile Include="wow\main\urls.py" />
+    <Compile Include="wow\main\views.py" />
+    <Compile Include="wow\main\__init__.py" />
+    <Compile Include="wow\manage.py" />
+    <Compile Include="wow\wow\asgi.py" />
+    <Compile Include="wow\wow\settings.py" />
+    <Compile Include="wow\wow\urls.py" />
+    <Compile Include="wow\wow\wsgi.py" />
+    <Compile Include="wow\wow\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="wow\main\templates\main\about.html" />
+    <Content Include="wow\main\templates\main\base.html" />
+    <Content Include="wow\main\templates\main\create.html" />
+    <Content Include="wow\main\templates\main\index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wow" />
+    <Folder Include="wow\main" />
+    <Folder Include="wow\main\migrations" />
+    <Folder Include="wow\main\templates" />
+    <Folder Include="wow\main\templates\main" />
+    <Folder Include="wow\wow" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="venv\">
+      <Id>venv</Id>
+      <Description>venv (Python 3.9 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <Version>0.0</Version>
+      <Architecture>X64</Architecture>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
